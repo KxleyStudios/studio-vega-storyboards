@@ -32,7 +32,7 @@ header {
 .logo-section h1 {
     font-size: 3rem;
     font-weight: bold;
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, #65b9ae, #2d7a61);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -74,7 +74,7 @@ header {
 
 .access-section input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #329c85;
 }
 
 .access-status {
@@ -132,7 +132,7 @@ header {
 
 .form-group input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #2d7f85;
 }
 
 .form-group small {
@@ -156,7 +156,7 @@ header {
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, #65b9ae, #2d7a61);
     color: white;
 }
 
