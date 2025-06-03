@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio VEGA - Storyboard Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <h1>Studio VEGA</h1>
+                <p class="subtitle">Storyboard Hub</p>
+                <p class="project-title">Learning With Pibby: Armageddon</p>
+            </div>
+        </header>
+
+        <main>
+            <!-- Access Code Section -->
+            <div class="access-section">
+                <input type="password" id="accessCode" placeholder="Enter moderator code (optional)">
+                <button onclick="checkAccess()" class="btn-primary">Enter Code</button>
+                <div id="accessStatus" class="access-status"></div>
+            </div>
+
+            <!-- Upload Section (Always Visible) -->
+            <section id="uploadSection" class="upload-section">
+                <h2>Upload Storyboard</h2>
+                <form id="uploadForm" class="upload-form">
+                    <div class="form-group">
+                        <label for="storyboardName">Storyboard Name:</label>
+                        <input type="text" id="storyboardName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sceneName">Scene:</label>
+                        <input type="text" id="sceneName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectName">Project:</label>
+                        <input type="text" id="projectName" value="Learning With Pibby: Armageddon" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="zipFile">Upload ZIP File:</label>
+                        <input type="file" id="zipFile" accept=".zip" required>
+                        <small>Only .zip files are accepted</small>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Upload Storyboard</button>
+                </form>
+                
+                <div id="uploadStatus" class="status-message"></div>
+            </section>
+
+            <!-- View All Section (Moderator Only) -->
+            <section id="viewSection" class="view-section" style="display: none;">
+                <h2>All Storyboards</h2>
+                <button onclick="loadStoryboards()" class="btn-secondary">Refresh List</button>
+                <div id="storyboardsList" class="storyboards-list"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Studio VEGA. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JSZip for handling ZIP files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
